@@ -96,12 +96,10 @@ body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #444;
   /* set your base font here, to apply evenly */
-  /* font-family: Georgia, serif;  */
+   font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;;  
 }
 
-/* headers (h1,h2,etc) have no default font-size or margin,
-   you'll want to define those yourself. */
-h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+h1,h2,h3,h4,h5,h6 { font-weight: normal; }
 
 /* always force a scrollbar in non-IE: */
 html { overflow-y: scroll; }
@@ -222,43 +220,124 @@ button {  width: auto; overflow: visible; }
 /* fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 .clearfix { zoom: 1; }
 
-
-
-
-
-
  /* Primary Styles
-    Author:
+    Author: Nick Evans
  */
 
-
+body{
+	background: #fff;
+}
 
 
 #container{
-margin: 10px auto;
+margin: 0 auto;
 width: 950px;
+color: #e2e2e2;
+}
+#main{
+	position: relative;
+}
+#counter{
+	color: #cccccc;
+	font-size: 197%;
+	margin-top: 1em;
+	position: absolute;
+}
+#counter strong{
+	color: #333;
 }
 
+#console{
+	position: absolute;
+	top:60px;
+	width: 970px;
+	background: #fff;
+	color: #ccc;
+	padding: 10px 0;
+	border-bottom: 2px solid #f1f1f1;
+	border-top: 2px solid #f1f1f1;
+}
+#console select,
+#console h3{
+	float: left;
+	margin-right: 10px;
+}
 #sample{
 	width: 470px;
-	position: relative;
-	font-size: 12px;
+	position: absolute;
+	margin-bottom: 2em;
+	color: #f1f1f1;	
+	top:150px;
+	margin-left: 10px;
+	font-family: Verdana;
 }
-
+#sample-wrapper{
+	top:120px;
+	width: 470px;
+	height: 500px;
+	position: absolute;
+	background: transparent url(../images/ruler.gif) 0 0px repeat-x;
+	padding: 30px 10px 0 10px;       
+    -moz-box-shadow:0px 0px 5px rgba(0,0,0,.9) inset;
+    -webkit-box-shadow:0px 0px 5px rgba(0,0,0,.9) inset;
+    box-shadow:0px 0px 5px rgba(0,0,0,.9) inset;
+}
 #sample b{
 	position: relative;
 	font-weight: inherit !important;
 }
-
+.ui-resizable-e {
+	cursor: e-resize;
+	height: 100%;
+	right: -20px;
+	top: -30px;
+	width: 470px;
+	background: transparent;
+}
+.ui-resizable-handle {
+	display: block;
+	font-size: 0.1px;
+	position: absolute;
+	z-index: 99999;
+}
 .pipe{
 	position: absolute;
 	color: #FF5E99;
 	margin-left: 0.25em;
 }
+#decoration{
+	height: 13px;
+	top:150px;
+	width: 100%;
+	position: absolute;
+	background-color: #444444;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+	background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+	background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+	-webkit-background-size: 32px 32px;
+	-moz-background-size: 32px 32px;
+	background-size: 32px 32px;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
 
-
-
-
+}
+#console{
+	position: relative;
+}
+#length{
+	position: absolute;
+	text-align: right;
+	border-left: 1px solid #fff;
+	margin-left: 0px;
+	margin-top: -21px;
+}
+#length span{
+	display: block;
+	padding-right: 10px;
+	border-right: 1px solid #fff;
+}
 /*
  * media queries for responsive design
  * these follow after primary styles so they will successfully override.
