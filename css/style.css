@@ -240,8 +240,11 @@ color: #e2e2e2;
 #counter{
 	color: #cccccc;
 	font-size: 197%;
-	margin-top: 1em;
+	margin-top: 0.7em;
 	position: absolute;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;	
 }
 #counter strong{
 	color: #333;
@@ -276,7 +279,7 @@ color: #e2e2e2;
 	width: 470px;
 	height: 500px;
 	position: absolute;
-	background: transparent url(../images/ruler.gif) 0 0px repeat-x;
+	background: rgba(50,50,50,0.6) url(../images/ruler.gif) 0 0px repeat-x;
 	padding: 30px 10px 0 10px;       
     -moz-box-shadow:0px 0px 5px rgba(0,0,0,.9) inset;
     -webkit-box-shadow:0px 0px 5px rgba(0,0,0,.9) inset;
@@ -291,7 +294,7 @@ color: #e2e2e2;
 	height: 100%;
 	right: -20px;
 	top: -30px;
-	width: 470px;
+	width: 500px;
 	background: transparent;
 }
 .ui-resizable-handle {
@@ -332,11 +335,45 @@ color: #e2e2e2;
 	border-left: 1px solid #fff;
 	margin-left: 0px;
 	margin-top: -21px;
+	color: #fff;
 }
 #length span{
 	display: block;
 	padding-right: 10px;
 	border-right: 1px solid #fff;
+}
+#link-twitter,
+#link-home{
+	float: right;
+	padding: 10px 12px;
+	margin: -9px 0 -12px 0;
+	color: #e2e2e2;
+	background: #fff;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;	
+}
+
+#link-twitter:hover,
+#link-home:hover{
+	background: #f1f11f;
+	color: #444444;
+}
+#link-twitter:hover #twitter-icon{
+	background-position: 0 -18px;
+}
+#twitter-icon{
+	background-image: url(../images/twitter-sprite.png);
+	background-position: 0 0;
+	width: 22px;
+	height: 18px;
+	
+	float: left;
+	clear: none;
+	margin-right: 5px;
+	margin-left: -2px;
+	margin-bottom: -2px;
 }
 /*
  * media queries for responsive design
