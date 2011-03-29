@@ -49,7 +49,7 @@ blockquote, q { quotes:none; }
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
 
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none !important; }
 
 ins { background-color:#ff9; color:#000; text-decoration:none; }
 
@@ -301,7 +301,7 @@ color: #e2e2e2;
 	display: block;
 	font-size: 0.1px;
 	position: absolute;
-	z-index: 99999;
+	z-index: 888;
 }
 .pipe{
 	position: absolute;
@@ -324,7 +324,7 @@ color: #e2e2e2;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
-
+	padding-bottom: 2.462em;
 }
 #console{
 	position: relative;
@@ -342,27 +342,29 @@ color: #e2e2e2;
 	padding-right: 10px;
 	border-right: 1px solid #fff;
 }
+.disqus-toggle,
 #link-twitter,
 #link-home{
 	float: right;
 	padding: 10px 12px;
 	margin: -9px 0 -12px 0;
-	color: #e2e2e2;
+	color: #e2e2e2 !important;
 	background: #fff;
 	text-decoration: none;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;	
 }
-
+.disqus-toggle:hover,
 #link-twitter:hover,
 #link-home:hover{
 	background: #f1f11f;
-	color: #444444;
+	color: #444444 !important;
 }
 #link-twitter:hover #twitter-icon{
 	background-position: 0 -18px;
 }
+
 #twitter-icon{
 	background-image: url(../images/twitter-sprite.png);
 	background-position: 0 0;
@@ -374,6 +376,62 @@ color: #e2e2e2;
 	margin-right: 5px;
 	margin-left: -2px;
 	margin-bottom: -2px;
+}
+
+
+#disqus-wrapper{
+	position: absolute;
+	z-index: 999;
+	background: #444444;
+	display: none;
+    -moz-box-shadow:0px 0px 5px rgba(0,0,0,.9) inset;
+    -webkit-box-shadow:0px 0px 5px rgba(0,0,0,.9) inset;
+    box-shadow:0px 0px 5px rgba(0,0,0,.9) inset;
+    padding: 20px;
+    width: 930px;
+    top:0;
+}
+#disqus-wrapper a{
+	color: #f1f11f;
+	text-decoration: none !important;
+}
+#disqus-wrapper .addthis_button_expanded{
+	color: #444;
+}
+#dsq-account-dropdown a{
+	display: none;
+}
+#disqus-wrapper a:hover{
+	color: #fff;
+}
+#dsq-content{
+	width: 50%;
+	margin-left:24%;
+}
+#disqus_thread{
+	border-top: 1px solid #e2e2e2;
+	margin-top: 20px;
+}
+body #dsq-content #dsq-global-toolbar{
+	position: absolute;
+	right: 20px;
+	margin: 0;
+}
+#disqus-wrapper .disqus-toggle{
+	position: absolute;
+	right: 10px;
+	background: transparent;
+}
+#disqus-wrapper .disqus-toggle:hover{
+	color: #fff !important;
+}
+#disqus-wrapper h3{
+	float: none;
+}
+.addthis_toolbox{
+	position: absolute;
+	top:12px;
+	z-index: 9999;
 }
 /*
  * media queries for responsive design

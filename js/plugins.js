@@ -64,4 +64,10 @@ window.log = function(){
   };
 })(document);
 
+var WebKitDetect = {  };
 
+// If the user agent is WebKit, returns true. Otherwise, returns false.
+WebKitDetect.isWebKit = function isWebKit()
+{
+    return RegExp(" AppleWebKit/").test(navigator.userAgent);
+}
