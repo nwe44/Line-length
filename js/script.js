@@ -1,8 +1,11 @@
-/* Author: Nick Evans
-
-ToDo
-Improve line length calculation
-*/
+/*! 
+ * Line measure 
+ * http://nwe44.github.com/Line-length/
+ * 
+ * Copyright (c) 2011 Nicholas Evans
+ * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
+ * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses. 
+ */
 
 
 var ll = {
@@ -186,19 +189,3 @@ var ll = {
 $(document).ready(function() { 
 	ll.init();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
